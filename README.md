@@ -35,7 +35,7 @@ lang/english/lang_english.conf, im Block [index] einfügen (Zeile 440):
 templates/xtc5/module/main_content.html, am Ende einfügen:
 <pre>
 	{if $RATING_MAX}
-	&lt;p class="textCenter clearBoth" itemscope itemtype="http://data-vocabulary.org/Review-aggregate"&gt;
+	&lt;p itemscope itemtype="http://data-vocabulary.org/Review-aggregate"&gt;
 		&lt;a target="_blank" href="{$RATING_URL}"&gt;
 			&lt;span itemprop="itemreviewed"&gt;{$smarty.const.STORE_NAME}&lt;/span&gt; {#text_rated_with#} &lt;span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating"&gt;&lt;span itemprop="average"&gt;{$RATING_AVERAGE}&lt;/span&gt; {#text_out_of#} &lt;span itemprop="best"&gt;{$RATING_MAX}&lt;/span&gt;&lt;/span&gt; {#text_stars_based_on#} &lt;span itemprop="votes"&gt;{$RATING_AMOUNT}&lt;/span&gt; {#text_opinions#}.
 		&lt;/a&gt;
