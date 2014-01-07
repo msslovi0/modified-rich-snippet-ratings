@@ -1,5 +1,5 @@
 # Rich Snippets Ratings für modified eCommerce Shopsoftware
-Dieses Modul ermöglicht die Einbindung der Bewertungssterne eines externen Dienstleisters im eigenen modified Shop.
+Dieses Modul ermöglicht die Einbindung der Bewertungssterne eines externen Dienstleisters im eigenen modified Shop. Die Anzeige erfolgt auf der Startseite unterhalb des eigentlichen Contents.
 
 ## Unterstützte Dienste
 - Trusted Shops
