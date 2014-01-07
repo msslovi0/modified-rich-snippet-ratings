@@ -6,14 +6,14 @@
  * - eKomi
  * - Haendlerbund
  **/
-$sService = 'ekomi';
+$sService = '';
 
 /**
  * ID des Bewertungsprofils, das ausgelesen werden soll
  **/
-$sServiceID = '44975';
+$sServiceID = '';
 
 /**
  * URL zur Bewertungsseite, nur bei eKomi nötig
  **/
-$sServiceUrl = 'https://www.ekomi.de/bewertungen-alternatede.html';
+$sServiceUrl = '';
