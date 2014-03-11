@@ -14,6 +14,6 @@ $sService = '';
 $sServiceID = '';
 
 /**
- * URL zur Bewertungsseite, nur bei eKomi nötig
+ * URL zur Bewertungsseite, nur bei eKomi legacy und Shopasukunft nötig
  **/
 $sServiceUrl = '';

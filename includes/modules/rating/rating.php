@@ -35,6 +35,17 @@ if(strstr($_SERVER['PHP_SELF'], 'index') && empty($_GET['cPath']) && empty($_GET
 					$oAmount = $oHTML->find('meta[itemprop=ratingcount]', 0);
 					$aData['amount'] = (int)$oAmount->content;
 				break;
+				case "shopauskunft":
+					$aData['url'] = $sServiceUrl;
+					require_once(DIR_WS_CLASSES."simple_html_dom.php");
+					$oHTML = file_get_html("https://www.shopauskunft.de/bewertung/b--S-".$sServiceID.".html");
+					$oAverage = $oHTML->find('.bigger_orange .average', 0);
+					$aData['average'] = (float)$oAverage->plaintext;
+					$oMax = $oHTML->find('.bigger_orange .smaller_grey .best', 0);
+					$aData['max'] = (int)$oMax->plaintext;
+					$oAmount = $oHTML->find('.seal_info_list .votes', 0);
+					$aData['amount'] = (int)$oAmount->plaintext;
+				break;
 				case "ekomi-legacy":
 				require_once(DIR_WS_CLASSES."simple_html_dom.php");
 					$aData['url'] = "https://www.ekomi.de/bewertungen-".$sServiceID.".html";

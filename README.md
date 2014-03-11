@@ -5,6 +5,7 @@ Dieses Modul ermöglicht die Einbindung der Bewertungssterne eines externen Dien
 - Trusted Shops
 - eKomi
 - Händlerbund
+- Shopauskunft
 
 ## Installation
 Alle Zeilenangaben basieren auf einem nicht modifizierten Shop in der Version 1.06.
