@@ -14,10 +14,10 @@ if(strstr($_SERVER['PHP_SELF'], 'index') && empty($_GET['cPath']) && empty($_GET
 			switch($sService) {
 				case "trustedshops":
 					$oXML = simplexml_load_file("https://www.trustedshops.com/bewertung/show_xml.php?tsid=".$sServiceID);
-					$oJSON = json_decode(file_get_contents('http://api.trustedshops.com/rest/public/v2/shops/'.$sServiceID.'/quality/reviews.json'), true)
+					$aJSON = json_decode(file_get_contents('http://api.trustedshops.com/rest/public/v2/shops/'.$sServiceID.'/quality/reviews.json'), true)
 					$aData['max'] = 5;
-					$aData['average'] = (float)$oJSON['response']['data']['shop']['qualityIndicators']['reviewIndicator']['overallMark'];
-					$aData['amount'] = (int)$oJSON['response']['data']['shop']['qualityIndicators']['reviewIndicator']['activeReviewCount'];
+					$aData['average'] = (float)$aJSON['response']['data']['shop']['qualityIndicators']['reviewIndicator']['overallMark'];
+					$aData['amount'] = (int)$aJSON['response']['data']['shop']['qualityIndicators']['reviewIndicator']['activeReviewCount'];
 					$aData['url'] = "https://www.trustedshops.com/bewertung/info_".$sServiceID.".html";
 				break;
 				case "haendlerbund":
